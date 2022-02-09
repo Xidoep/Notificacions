@@ -10,9 +10,6 @@ public class NotificacionsProva : MonoBehaviour
     private void Update()
     {
         if (Key.A.OnPress())
-        {
             notifications.Notify();
-        }
     }
-
 }

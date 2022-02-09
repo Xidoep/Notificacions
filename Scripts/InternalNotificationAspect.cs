@@ -12,19 +12,32 @@ public class InternalNotificationAspect : MonoBehaviour
     [SerializeField] TMP_Text titol; 
     [SerializeField] TMP_Text descripcio;
 
-    public void Set(Sprite icone, LocalizedString titol, LocalizedString descripcio)
+    public void Set(LocalizedString titol, LocalizedString descripcio, Sprite icone = null)
     {
         this.icone.sprite = icone;
+
         titol.GetLocalizedStringAsync(titol).Completed += Titol;
         descripcio.GetLocalizedStringAsync(descripcio).Completed += Descripcio;
+
+        if (icone != null)
+            return;
+
+        this.icone.enabled = false;
+        this.titol.GetComponent<RectTransform>().anchoredPosition = new Vector2(20, 20);
+        this.descripcio.GetComponent<RectTransform>().anchoredPosition = new Vector2(20, 20);
     }
 
-    public void Set(LocalizedString titol, LocalizedString descripcio)
+    public void Set(string titol, string descripcio, Sprite icone)
     {
-        this.icone.enabled = false;
-        titol.GetLocalizedStringAsync(titol).Completed += Titol;
-        descripcio.GetLocalizedStringAsync(descripcio).Completed += Descripcio;
+        this.icone.sprite = icone;
 
+        this.titol.text = titol;
+        this.descripcio.text = descripcio;
+
+        if (icone != null)
+            return;
+
+        this.icone.enabled = false;
         this.titol.GetComponent<RectTransform>().anchoredPosition = new Vector2(20, 20);
         this.descripcio.GetComponent<RectTransform>().anchoredPosition = new Vector2(20, 20);
     }
