@@ -13,7 +13,7 @@ public class InternalNotifications : ScriptableObject
     [SerializeField] LocalizedString descripcio;
 
     [ContextMenu("Show")]
-    public void Show()
+    public void Notify()
     {
         if (icone != null) 
             Instantiate(uiPrefab).GetComponent<InternalNotificationAspect>().Set(icone, titol, descripcio);

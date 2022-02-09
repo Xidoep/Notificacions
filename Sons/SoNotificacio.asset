@@ -15,10 +15,10 @@ MonoBehaviour:
   defecte: {fileID: 8300000, guid: 14b0af886e6b9ae4986fffade20bd12f, type: 3}
   prefab: {fileID: 8189387271757548685, guid: c3d834c8c2ee8bc4199d689790f3c584, type: 3}
   pool: {fileID: 0}
-  loop: 0
   volum: {x: 1, y: 1}
   pitch: {x: 1, y: 1}
+  loop: 0
   spatialBlend: 0
   distanciaMaxima: 100
   clips:
-  - {fileID: 8300000, guid: 727989cd24faafd458aa84b64dec6b91, type: 3}
+  - {fileID: 8300000, guid: 6e1f370554fa96242a1a2fda264df25c, type: 3}

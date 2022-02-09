@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f82f409417fe4943ad8db8fa27d860b, type: 3}
   m_Name: So
   m_EditorClassIdentifier: 
-  play: 0.1
+  play: 0.05
   so: {fileID: 11400000, guid: 84c31ddeb69f4ac46beb4fa634dd71b0, type: 2}
